@@ -192,6 +192,37 @@ sub-procedure test2
         display "NO" crlf
     repeat
 
+    store 0 in numVar1
+    if numVar1 is equal to 1 then
+        display "NO" crlf
+    else if numVar1 is equal to 0 then
+        display "OK" crlf
+    end if
+
+    store 123 in numVar1
+    if numVar1 is equal to 1 then
+        display "NO" crlf
+    else if numVar1 is equal to 0 then
+        display "NO" crlf
+    else if numVar1 is equal to 4 then
+        display "NO" crlf
+    else if numVar1 is equal to 5 then
+        display "NO" crlf
+    end if
+
+    store 123 in numVar1
+    if numVar1 is equal to 1 then
+        display "NO" crlf
+    else if numVar1 is equal to 0 then
+        display "NO" crlf
+    else if numVar1 is equal to 4 then
+        display "NO" crlf
+    else if numVar1 is equal to 123 then
+        display "OK" crlf
+    else
+        display "NO" crlf
+    end if 
+
     return
     exit
 end sub-procedure

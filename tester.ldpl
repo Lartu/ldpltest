@@ -15,7 +15,6 @@ failCount is number
 passCount is number
 
 PROCEDURE:
-
 # ------------------------------------------------------------
 # ADD TESTS HERE
 store "conflow"     in tests:0
