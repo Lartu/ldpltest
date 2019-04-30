@@ -7,6 +7,7 @@ The following tests are used to test the language:
  - **conflow.ldpl**: test basic control flow statements.
  - **basicar.ldpl**: test basic arithmetic statements.
  - **basictx.ldpl**: test basic text statements.
+ - **vector.ldpl**: test vector statements.
  - **file.ldpl**: create a file, open a file, write to it, append to it.
  - **fibo.ldpl**: calculate the first 50 fibonacci numbers.
  - **explode.ldpl**: splits a string.

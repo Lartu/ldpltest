@@ -20,11 +20,12 @@ PROCEDURE:
 store "conflow"     in tests:0
 store "basicar"     in tests:1
 store "basictx"     in tests:2
-store "file"        in tests:3
-store "fibo"        in tests:4
-store "explode"     in tests:5
-store "sqrt"        in tests:6
-store "quine"       in tests:7
+store "vector"      in tests:3
+store "file"        in tests:4
+store "fibo"        in tests:5
+store "explode"     in tests:6
+store "sqrt"        in tests:7
+store "quine"       in tests:8
 # ------------------------------------------------------------
 
 sub-procedure execute-command
