@@ -22,7 +22,7 @@ sub-procedure test1
     store "Hi\tthere!" in txtVar2
     display txtVar2 crlf
     store txtVar2 in numVar1
-    display numVar1
+    display numVar1 crlf
     store "-12.6" in myVar/4
     store myVar/4 in myVar/3
     display myVar/4 " " myVar/3 crlf
