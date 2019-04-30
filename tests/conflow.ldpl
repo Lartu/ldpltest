@@ -32,6 +32,8 @@ sub-procedure test1
     store "12" in myVar/4
     store myVar/4 in myVar/3
     display myVar/4 " " myVar/3 crlf
+    store "0" in myVar/4
+    display myVar/4 crlf
     store crlf in txtVar2
     display "---" txtVar2 "." crlf
 end sub-procedure

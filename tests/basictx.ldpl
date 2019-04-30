@@ -22,6 +22,8 @@ store -1.652 in string
 display string crlf
 store 1.652 in string
 display string crlf
+store 0 in string
+display string crlf
 join "Hi there!" and " How are you?" in string
 join string and " 你好" in string
 join string and " 안녕하세요" in string
