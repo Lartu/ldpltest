@@ -29,5 +29,10 @@ The tester is written in LDPL. To compile and run it you should run
 
 preferably with a stable version of LDPL.
 
+To use a development version of LDPL, set the `LDPLBIN` environment 
+variable: 
+
+`env LDPLBIN=/path/to/dev/ldpl sh compileAndRunTester.sh`
+
 ## How to run the tester
 Run `$ ./tester`.
