@@ -28,3 +28,9 @@ abs d
 display a " "  b " " c " " d crlf
 in a solve (a + b + c + d) / (- ( - a - b - c - d))
 display a " "  b " " c " " d crlf
+while a is less than 100 do 
+    incr a
+repeat
+decr a
+decr a
+display a crlf 
