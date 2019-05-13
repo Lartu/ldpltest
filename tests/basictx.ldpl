@@ -7,9 +7,11 @@
 DATA:
 string is text
 string2 is text
+long-quote is text
 length is number
 cc1 is number
 cc2 is number
+parts is text vector
 
 PROCEDURE:
 store "Hi there!" in string
@@ -50,6 +52,7 @@ statements whitespace is preserved literally, escape codes like \t and
 \033[33mwork the same as they do in regular text variables\033[0m (and can themselves
 be escaped using \\), and double quotes (") don't need to be escaped.
 END QUOTE
+store string in long-quote
 display string "<--" crlf crlf crlf
 store character code of "A" in cc1
 store character code of "😃" in cc2
@@ -61,3 +64,9 @@ store character cc2 in string
 display string crlf
 store character cc1 in string
 display string crlf
+split long-quote by "" in parts
+display parts:4 parts:5 parts:6 parts:7 parts:8 crlf
+split long-quote by " " in parts
+display parts:4 " " parts:5 " " parts:6 " " parts:7 " " parts:8 crlf
+split "A.B.C" by "." in parts
+display parts:0 parts:1 parts:2 crlf
