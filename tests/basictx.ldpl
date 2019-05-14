@@ -70,3 +70,8 @@ split long-quote by " " in parts
 display parts:4 " " parts:5 " " parts:6 " " parts:7 " " parts:8 crlf
 split "A.B.C" by "." in parts
 display parts:0 parts:1 parts:2 crlf
+replace "." from "A.B.C" with "/" in string 
+display string crlf 
+replace "LDPL" from "I think LDPL is terrific!" with "🦕" in string
+replace "ter" from string with "dino" in string
+display string crlf 
