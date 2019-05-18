@@ -26,6 +26,7 @@ store "fibo"        in tests:5
 store "explode"     in tests:6
 store "sqrt"        in tests:7
 store "quine"       in tests:8
+store "exec"        in tests:9
 # ------------------------------------------------------------
 
 sub-procedure execute-command
