@@ -13,6 +13,7 @@ The following tests are used to test the language:
  - **explode.ldpl**: splits a string.
  - **sqrt.ldpl**: calculate a square root using the Babylonian Method.
  - **quine.ldpl**: a quine program.
+ - **exec.ldpl**: tests execution and system statements.
 
 ## Statements not being tested
 
