@@ -7,6 +7,7 @@
 DATA:
 a is number vector
 b is text vector
+l is number
 
 PROCEDURE:
 
@@ -72,5 +73,22 @@ display "43. " a:"there" crlf #0
 display "44. " a:"hello there" crlf #1
 display "45. " a:"hello there " crlf #0
 display "46. " a:"  hello there" crlf #0
+
+clear a
+display a:"hello there" crlf #0
+store 1 in a:0
+store index count of a in l
+display l crlf #2
+
+store indices of a in b
+display b:0 crlf
+display b:1 crlf
+
+store "hi" in b:0
+display b:0 crlf #hi
+clear b
+display "-" b:0 crlf #""
+store index count of b in l
+display l crlf #1
 
 #TODO test text vectors
