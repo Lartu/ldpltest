@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 echo "Compiling the Tester..."
-${LDPLBIN:-ldpl} tester.ldpl -o=tester
+ldpl tester.ldpl -o=tester
 ./tester
 rm tester

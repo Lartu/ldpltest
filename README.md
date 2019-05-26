@@ -30,10 +30,14 @@ The tester is written in LDPL. To compile and run it you should run
 
 preferably with a stable version of LDPL.
 
-To use a development version of LDPL, set the `LDPLBIN` environment 
-variable: 
-
-`env LDPLBIN=/path/to/dev/ldpl sh compileAndRunTester.sh`
-
 ## How to run the tester
 Run `$ ./tester`.
+
+## Using a custom runner
+By default the tester will compile and run each test with `ldpl`, but you can define your own "compile and run" process by providing a runner script with the `-r=` flag:
+
+    ldpl tester.ldpl -o=tester
+    ./tester -r=my-ldpl.sh
+
+This would execute the `my-ldpl.sh` program once for each test file, passing the test file as the first argument. In your runner script you could, for example, build and run each test file with a development version of LDPL. Or a different compiler/interpreter entirely.
+

@@ -13,6 +13,7 @@ testCount is number
 i is number
 failCount is number
 passCount is number
+testRunner is text
 
 PROCEDURE:
 # ------------------------------------------------------------
@@ -58,6 +59,12 @@ display crlf " \033[90m+----------------------------------------+" crlf
 display " \033[90m| \033[92mLDPL Programming Language\033[96m Test Battery\033[90m |\033[0m" crlf
 display " \033[90m+----------------------------------------+\033[0m" crlf crlf
 
+# optional test runner
+get index of "-r=" from argv:0 in i
+if i is greater than or equal to 0 then
+    replace "-r=" from argv:0 with "" in testRunner
+end if
+
 # Count tests
 store 0 in testCount
 store 0 in i
@@ -74,13 +81,20 @@ store 0 in i
 while i is less than testCount do
     store tests:i in testName
     display "\033[33mTesting '" testName ".ldpl'\033[0m" crlf
-    in command join "cd tests && ldpl " testName ".ldpl -o=" testName " > /dev/null"
-    call execute-command
-    in command join "cd tests && ./" testName " > " testName ".test"
-    call execute-command
+    if testRunner is equal to "" then
+        in command join "cd tests && ldpl " testName ".ldpl -o=" testName " > /dev/null"
+        call execute-command
+        in command join "cd tests && ./" testName " > " testName ".test"
+        call execute-command
+    else
+        in command join "cd tests && " testRunner " " testName ".ldpl > " testName ".test"
+        call execute-command
+    end if
     call compare-results
-    in command join "cd tests && rm " testName
-    call execute-command
+    if testRunner is equal to "" then
+      in command join "cd tests && rm " testName
+      call execute-command
+    end if
     display crlf
     add 1 and i in i
 repeat
