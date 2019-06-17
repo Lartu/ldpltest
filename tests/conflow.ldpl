@@ -223,7 +223,33 @@ sub-procedure test2
         display "OK" crlf
     else
         display "NO" crlf
-    end if 
+    end if
+
+    for numVar1 from 0 to 10 step 2 do
+        if numVar1 is greater than 7 then
+            break
+        end if
+        display "FOR A " numVar1 crlf
+    next
+
+    for numVar1 from 5 to 0 step -1 do
+        if numVar1 is equal to 3 then
+            continue
+        end if
+        display "FOR B " numVar1 crlf
+    next
+
+    for numVar1 from 3 to 3 step 1 do
+        display "FOR C " numVar1 crlf
+    next
+
+    for numVar1 from 0 to -1 step 1 do
+        display "FOR D " numVar1 crlf
+    next
+
+    for numVar1 from 1 to 200 step numVar1 do
+        display "FOR E " numVar1 crlf
+    next
 
     return
     exit
