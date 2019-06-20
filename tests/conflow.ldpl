@@ -9,6 +9,9 @@ numVar1 is NUMBER
 txtVar2 is TEXT
 myVar/3 is NUMBER
 myVar/4 is TEXT
+txtList is TEXT LIST
+numList is NUMBER LIST
+numMap is NUMBER MAP
 
 PROCEDURE:
 # Test STORE
@@ -250,6 +253,38 @@ sub-procedure test2
     for numVar1 from 1 to 200 step numVar1 do
         display "FOR E " numVar1 crlf
     repeat
+
+    push "A" to txtList
+    push "B" to txtList
+    push "C" to txtList
+    for each txtVar2 in txtList do
+        display "FOR EACH A " txtVar2 crlf
+    repeat
+
+    push 1 to numList
+    push 2 to numList
+    push 3 to numList
+    push 4 to numList
+    push 5 to numList
+    for each numVar1 in numList do
+        display "FOR EACH B " numVar1 crlf
+        if numVar1 is equal to 3 then
+            break
+        end if
+    repeat
+
+    store 1 in numMap:"-"
+    store 3 in numMap:"+"
+    store 5 in numMap:"*"
+    store 7 in numMap:"/"
+    store 0 in myVar/3
+    for each numVar1 in numMap do
+        if numVar1 is equal to 5 then
+            continue
+        end if
+        add numVar1 and myVar/3 in myVar/3
+    repeat
+    display "FOR EACH C " myVar/3 crlf
 
     return
     exit
