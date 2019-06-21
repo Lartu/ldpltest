@@ -254,6 +254,10 @@ sub-procedure test2
         display "FOR E " numVar1 crlf
     repeat
 
+    for numVar1 from 42 to 42.1 step 1 do
+        display "FOR F " numVar1 crlf
+    repeat
+
     push "A" to txtList
     push "B" to txtList
     push "C" to txtList
