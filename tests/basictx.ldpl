@@ -86,3 +86,13 @@ get index of "GH" from string in cc1
 display cc1 crlf
 get index of "A" from "" in cc1
 display cc1 crlf
+count "A" from string in cc1
+display cc1 crlf
+count "😃" from string in cc1
+display cc1 crlf
+count "EF 🦕" from string in cc1
+display cc1 crlf
+count "GH" from string in cc1
+display cc1 crlf
+count "A" from "" in cc1
+display cc1 crlf
