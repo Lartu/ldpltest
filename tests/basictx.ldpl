@@ -96,3 +96,9 @@ count "GH" from string in cc1
 display cc1 crlf
 count "A" from "" in cc1
 display cc1 crlf
+substring string from 0 length 5 in string2
+display string2 crlf
+substring string from 6 length 1 in string2
+display string2 crlf
+substring string from 1 length 0 in string2
+display string2 crlf
