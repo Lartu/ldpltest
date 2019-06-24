@@ -74,4 +74,15 @@ replace "." from "A.B.C" with "/" in string
 display string crlf 
 replace "LDPL" from "I think LDPL is terrific!" with "🦕" in string
 replace "ter" from string with "dino" in string
-display string crlf 
+display string crlf
+store "AB 🦕 CD 😃 EF 🦕 AB" in string
+get index of "A" from string in cc1
+display cc1 crlf
+get index of "😃" from string in cc1
+display cc1 crlf
+get index of "EF 🦕" from string in cc1
+display cc1 crlf
+get index of "GH" from string in cc1
+display cc1 crlf
+get index of "A" from "" in cc1
+display cc1 crlf
