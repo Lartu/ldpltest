@@ -102,3 +102,19 @@ substring string from 6 length 1 in string2
 display string2 crlf
 substring string from 1 length 0 in string2
 display string2 crlf
+trim "A" in string
+display string crlf
+trim " B" in string
+display string crlf
+trim "C " in string
+display string crlf
+trim " D " in string
+display string crlf
+trim "	E		 	 " in string
+display string crlf
+trim "" in string
+display string crlf
+trim " " in string
+display string crlf
+trim "   F 🦕 🦕 F   " in string
+display string crlf
