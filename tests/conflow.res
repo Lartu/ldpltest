@@ -396,4 +396,13 @@ FOR EACH B 1
 FOR EACH B 2
 FOR EACH B 3
 FOR EACH C 11
+I'm a variable from test3!
+0
+100
+I'm a variable from test3!
+0
+[myLocalVar starts at 0![myLocalVar starts at 0!I'm execution Nº 2!]I'm execution Nº 1!]
+3
+[myLocalVar starts at 0![myLocalVar starts at 0![myLocalVar starts at 0!I'm execution Nº 2!]I'm execution Nº 1!]I'm execution Nº 0!]
+[myLocalVar starts at 0!I'm execution Nº 2!]
 Okay!
