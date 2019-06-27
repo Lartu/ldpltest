@@ -304,4 +304,45 @@ exit
 label realTests
 call sub-procedure test1
 call test2
+
+sub-procedure test3
+  local data:
+    numVar1 is text
+    myVar/3 is number
+  procedure:
+    store "I'm a variable from test3!" in numVar1
+    display numVar1 crlf
+    display myVar/3 crlf
+end sub-procedure
+store 100 in myVar/3
+call test3
+display myVar/3 crlf
+create statement "Test Statement A" executing test3
+test statement a
+
+sub-procedure test4
+  parameters:
+    executions is number
+  local data:
+    myLocalVar is number
+  procedure:
+    incr executions
+    if executions is equal to 3 then
+      return
+    end if
+    display "[myLocalVar starts at " myLocalVar "!"
+    store executions in myLocalVar
+    call test4 with executions
+    display "I'm execution Nº " myLocalVar "!]"
+end sub-procedure
+store 0 in numVar1
+call test4 with numVar1
+display crlf numvar1 crlf
+call test4 with -1
+display crlf
+create statement "Test Statement $ B" executing test4
+test statement 1 b
+display crlf
+
 goto end
+display "NOPE" crlf
