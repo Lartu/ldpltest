@@ -22,6 +22,8 @@ The following tests are used to test the language:
  - `STORE RANDOM IN`
  - `WAIT - MILLINSECONDS`
  - `IMPORT`
+ - `EXTENSION`
+ - `FLAG`
  - C++ extension compatibility.
 
 ## How to compile the tester
