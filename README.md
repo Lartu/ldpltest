@@ -14,6 +14,7 @@ The following tests are used to test the language:
  - **sqrt.ldpl**: calculate a square root using the Babylonian Method.
  - **quine.ldpl**: a quine program.
  - **exec.ldpl**: tests execution and system statements.
+ - **list.ldpl**: test list statements.
 
 ## Statements not being tested
 
@@ -40,4 +41,3 @@ By default the tester will compile and run each test with `ldpl`, but you can de
     ./tester -r=my-ldpl.sh
 
 This would execute the `my-ldpl.sh` program once for each test file, passing the test file as the first argument. In your runner script you could, for example, build and run each test file with a development version of LDPL. Or a different compiler/interpreter entirely.
-

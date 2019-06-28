@@ -1,0 +1,60 @@
+# list.ldpl
+# test basic list statements.
+# part of the LDPL Programming Language Test Battery
+# by Martín del Río
+# https://github.com/lartu/ldpltest
+
+DATA:
+nl is number list
+nl2 is number list
+tl is text list
+tl2 is text list
+n is number
+t is text
+
+PROCEDURE:
+
+sub test
+    store length of nl in n
+    display "N " n crlf
+    for each n in nl do
+        display n crlf
+    repeat
+    store length of tl in n
+    display "T " n crlf
+    for each t in tl do
+        display t crlf
+    repeat
+end sub
+
+call test
+
+push 10 to nl
+push "A" to tl
+call test
+
+push 20 to nl
+push "B" to tl
+call test
+
+copy nl to nl2
+copy tl to tl2
+delete last element of nl
+delete last element of tl
+call test
+
+delete last element of nl
+delete last element of tl
+call test
+
+delete last element of nl
+delete last element of tl
+call test
+
+copy nl2 to nl
+copy tl2 to tl
+call test
+
+clear nl
+clear tl
+call test

@@ -28,6 +28,7 @@ store "explode"     in tests:6
 store "sqrt"        in tests:7
 store "quine"       in tests:8
 store "exec"        in tests:9
+store "list"        in tests:10
 # ------------------------------------------------------------
 
 sub-procedure execute-command
