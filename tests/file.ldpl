@@ -37,4 +37,4 @@ display sum crlf # The order is not important
 list contents of directory "testdir/5000" in directory
 store length of directory in sum
 display sum crlf
-execute "rmdir -r testdir"
+execute "rm -r testdir"
