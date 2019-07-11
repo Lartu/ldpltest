@@ -23,18 +23,3 @@ append filecontents to file filename
 
 load file filename in filecontents
 display filecontents
-
-execute "mkdir testdir"
-write "" to file "testdir/1"
-write "" to file "testdir/70"
-write "" to file "testdir/300"
-execute "mkdir testdir/5000"
-list contents of directory "testdir" in directory
-for each myText in directory do
-    in sum solve sum + myText
-repeat
-display sum crlf # The order is not important
-list contents of directory "testdir/5000" in directory
-store length of directory in sum
-display sum crlf
-execute "rm -r testdir"
