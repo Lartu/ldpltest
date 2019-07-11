@@ -22,7 +22,6 @@ The following tests are used to test the language:
  - `ACCEPT - UNTIL EOF`
  - `STORE RANDOM IN`
  - `WAIT - MILLINSECONDS`
- - `LIST CONTENTS OF DIRECTORY`
  - `IMPORT`
  - `EXTENSION`
  - `FLAG`
