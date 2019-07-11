@@ -8,7 +8,7 @@ The following tests are used to test the language:
  - **basicar.ldpl**: test basic arithmetic statements.
  - **basictx.ldpl**: test basic text statements.
  - **vector.ldpl**: test vector statements.
- - **file.ldpl**: create a file, open a file, write to it, append to it, list contents of directory.
+ - **file.ldpl**: create a file, open a file, write to it, append to it.
  - **fibo.ldpl**: calculate the first 50 fibonacci numbers.
  - **explode.ldpl**: splits a string.
  - **sqrt.ldpl**: calculate a square root using the Babylonian Method.
