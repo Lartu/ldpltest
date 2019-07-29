@@ -14,6 +14,7 @@ i is number
 failCount is number
 passCount is number
 testRunner is text
+argc is number
 
 PROCEDURE:
 # ------------------------------------------------------------
@@ -47,12 +48,12 @@ sub-procedure compare-results
     if fileExpected is not equal to fileResults then
         display "\033[91m*** TEST '" testName "' FAILED ***\033[0m" crlf
         display "\033[90m(" testName ".test not deleted. Please check it)\033[0m" crlf
-        add 1 and failCount in failCount
+        in failCount solve failCount + 1
     else
         display "\033[92m*** TEST '" testName "' PASSED ***\033[0m" crlf
         in command join "cd tests && rm " testName ".test"
         call execute-command
-        add 1 and passCount in passCount
+        in passCount solve passCount + 1
     end if
 end sub-procedure
 
@@ -61,9 +62,12 @@ display " \033[90m| \033[92mLDPL Programming Language\033[96m Test Battery\033[9
 display " \033[90m+----------------------------------------+\033[0m" crlf crlf
 
 # optional test runner
-get index of "-r=" from argv:0 in i
-if i is greater than or equal to 0 then
-    replace "-r=" from argv:0 with "" in testRunner
+get length of argv in argc
+if argc is greater than 0 then
+    get index of "-r=" from argv:0 in i
+    if i is greater than or equal to 0 then
+        replace "-r=" from argv:0 with "" in testRunner
+    end if
 end if
 
 # Count tests
@@ -72,8 +76,8 @@ store 0 in i
 display "\033[95mTests found:\033[0m "
 while tests:i is not equal to "" do
     display tests:i " "
-    add i and 1 in i
-    add 1 and testCount in testCount
+    in i solve i + 1
+    in testCount solve testCount + 1
 repeat
 
 display "\033[95m(" testCount ")\033[0m" crlf crlf
@@ -97,7 +101,7 @@ while i is less than testCount do
       call execute-command
     end if
     display crlf
-    add 1 and i in i
+    in i solve i + 1
 repeat
 
 display "\033[92mPassed: \033[0m" passCount crlf

@@ -16,21 +16,24 @@ store 9875 in b
 store 0.1239 in c
 store -12.989 in d
 display a " "  b " " c " " d crlf
-add a and a in a
-multiply b by c in b
-subtract b from a in a
-divide b by d in d
+in a solve a + a
+in b solve b * c
+in a solve a - b
+in d solve b / d
 display a " "  b " " c " " d crlf
 modulo a by 678 in a
 floor b
-ceil c
-abs d
+floor c
+in c solve c + 1
+if d is less than 0 then
+    in d solve -1 * d
+end if
 display a " "  b " " c " " d crlf
 in a solve (a + b + c + d) / (- ( - a - b - c - d))
 display a " "  b " " c " " d crlf
-while a is less than 100 do 
-    incr a
+while a is less than 100 do
+    in a solve a + 1
 repeat
-decr a
-decr a
-display a crlf 
+in a solve a - 1
+in a solve a - 1
+display a crlf

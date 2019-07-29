@@ -8,6 +8,7 @@ DATA:
 a is number vector
 b is text vector
 l is number
+keys is text list
 
 PROCEDURE:
 
@@ -15,14 +16,14 @@ store 1 in a:78
 display "1. " a:0 crlf #0
 display "2. " a:78 crlf #1
 display "3. " a:"hi there" crlf #0
-display "4. " a:"\n" crlf #0 
+display "4. " a:"\n" crlf #0
 display "5. " a:89.12 crlf #0
 display "6. " a:"--78" crlf #0
 
 store 1 in a:0123
 display "7. " a:0 crlf #0
 display "8. " a:0.123 crlf #0
-display "9. " a:"" crlf 
+display "9. " a:"" crlf
 display "10. " a:123 crlf #1
 display "11. " a:000123 crlf #1
 display "12. " a:"0123" crlf #0
@@ -77,18 +78,18 @@ display "46. " a:"  hello there" crlf #0
 clear a
 display a:"hello there" crlf #0
 store 1 in a:0
-store index count of a in l
+get key count of a in l
 display l crlf #2
 
-store indices of a in b
-display b:0 crlf
-display b:1 crlf
+get keys of a in keys
+display keys:0 crlf
+display keys:1 crlf
 
 store "hi" in b:0
 display b:0 crlf #hi
 clear b
 display "-" b:0 crlf #""
-store index count of b in l
+get key count of b in l
 display l crlf #1
 
 #TODO test text vectors
