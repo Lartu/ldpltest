@@ -19,8 +19,8 @@ store 2 in count
 
 while count is less than 50 do
     store b in swap
-    add a and b in b
+    in b solve a + b
     store swap in a
     display count ": " b crlf
-    add count and 1 in count
+    in count solve count + 1
 repeat

@@ -15,12 +15,12 @@ t is text
 PROCEDURE:
 
 sub test
-    store length of nl in n
+    get length of nl in n
     display "N " n crlf
     for each n in nl do
         display n crlf
     repeat
-    store length of tl in n
+    get length of tl in n
     display "T " n crlf
     for each t in tl do
         display t crlf

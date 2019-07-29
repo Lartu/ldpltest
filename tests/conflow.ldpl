@@ -162,19 +162,19 @@ sub-procedure test2
     store 0 in numVar1
     while numVar1 is less than 100.5 do
         display "LOOP A" crlf
-        add 0.78 and numVar1 in numVar1
+        in numVar1 solve numVar1 + 0.78
     repeat
 
     store 0 in numVar1
     while numVar1 is less than or equal to 100 do
         display "LOOP B" crlf
-        add 1 and numVar1 in numVar1
+        in numVar1 solve numVar1 + 1
     repeat
 
     store 0 in numVar1
     while numVar1 is less than or equal to 100 do
         display "LOOP B" crlf
-        add 1 and numVar1 in numVar1
+        in numVar1 solve numVar1 + 1
         continue
         store 0 in numVar1
     repeat
@@ -182,7 +182,7 @@ sub-procedure test2
     store 0 in numVar1
     while numVar1 is greater than 100 do
         display "LOOP C" crlf
-        add 1 and numVar1 in numVar1
+        in numVar1 solve numVar1 + 1
     repeat
 
     store "" in myVar/4
@@ -286,7 +286,7 @@ sub-procedure test2
         if numVar1 is equal to 5 then
             continue
         end if
-        add numVar1 and myVar/3 in myVar/3
+        in myVar/3 solve numVar1 + myVar/3
     repeat
     display "FOR EACH C " myVar/3 crlf
 
@@ -326,7 +326,7 @@ sub-procedure test4
   local data:
     myLocalVar is number
   procedure:
-    incr executions
+    in executions solve executions + 1
     if executions is equal to 3 then
       return
     end if

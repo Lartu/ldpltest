@@ -4,6 +4,8 @@
 # by Ambulancja (https://github.com/ambulancja)
 # https://github.com/lartu/ldpltest
 
+# TODO: Make this a quine again
+
 DATA:
   A IS NUMBER VECTOR
   C IS TEXT
@@ -20,7 +22,7 @@ PROCEDURE:
         DISPLAY " IN "
         DISPLAY " A:"
         DISPLAY I CRLF
-        ADD I AND 1 IN I
+        IN I SOLVE I + 1
     REPEAT
     DISPLAY "  STORE "
     DISPLAY N
@@ -33,10 +35,10 @@ PROCEDURE:
         IF A:J IS EQUAL TO 42 THEN
           CALL SUB-PROCEDURE SHOWU
         ELSE
-          STORE CHARACTER A:J IN C
+          GET ASCII CHARACTER A:J IN C
           DISPLAY C
         END-IF
-        ADD J AND 1 IN J
+        IN J SOLVE J + 1
     REPEAT
   END SUB-PROCEDURE
 
