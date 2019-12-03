@@ -23,3 +23,13 @@ push list to nlist
 push 123 to nlist:0
 push 456 to nlist:0
 call takes-nested-list with nlist
+
+sub takes-nested-map
+parameters:
+    m is map of list of text
+procedure:
+    display "Map: " m:"a":0 crlf
+end sub
+
+push "seven eight nine" to tmap:"a"
+call takes-nested-map with tmap
