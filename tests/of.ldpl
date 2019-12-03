@@ -1,0 +1,48 @@
+# of.ldpl
+# test multicontainer declarations.
+# part of the LDPL Programming Language Test Battery
+# by Martín del Río
+# https://github.com/lartu/ldpltest
+
+DATA:
+nlist is list of list of numbers
+tmap is map of list of text
+vmap is map of map of map of list of text
+
+PROCEDURE:
+
+sub takes-nested-list
+parameters:
+    li is list of list of numbers
+procedure:
+    display "Got: " li:0:0 crlf
+    display "And: " li:0:1 crlf
+end sub
+
+push list to nlist
+push list to nlist
+push 123 to nlist:0
+push 456 to nlist:0
+call takes-nested-list with nlist
+
+sub takes-nested-map
+parameters:
+    m is map of list of text
+procedure:
+    display "Map: " m:"a":0 crlf
+end sub
+
+push "seven eight nine" to tmap:"a"
+call takes-nested-map with tmap
+
+sub takes-deeply-nested-map
+parameters:
+    m is map of map of map of list of text
+procedure:
+    display m:"1st":"2nd":"3rd":0 crlf
+    display m:"1st":"2nd":"3rd":1 crlf
+end sub
+
+push "works" to vmap:"1st":"2nd":"3rd"
+push "...i guess" to vmap:"1st":"2nd":"3rd"
+call takes-deeply-nested-map with vmap
