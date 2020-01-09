@@ -23,3 +23,15 @@ append filecontents to file filename
 
 load file filename in filecontents
 display filecontents
+
+execute "touch tmp-append.txt"
+execute "chmod 000 tmp-append.txt"
+append "Anything!" to file "tmp-append.txt"
+display "err: " ERRORCODE " - " ERRORTEXT crlf
+
+execute "touch tmp-write.txt"
+execute "chmod 000 tmp-write.txt"
+write "Anything at all!" to file "tmp-write.txt"
+display "err: " ERRORCODE " - " ERRORTEXT crlf
+
+execute "rm -f tmp-*.txt"
