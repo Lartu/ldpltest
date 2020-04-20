@@ -282,7 +282,8 @@ sub-procedure test2
     store 5 in numMap:"*"
     store 7 in numMap:"/"
     store 0 in myVar/3
-    for each numVar1 in numMap do
+    for each txtVar2 in numMap do
+        store numMap:txtVar2 in numVar1
         if numVar1 is equal to 5 then
             continue
         end if
